@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>Registro de Restaurantes</title>
+</head>
+
+<body>
+  <div class="container-restaurant">
+  <form class="restaurant-form__container">
+    <h2 class="restaurant-form__title">Registro de Restaurantes</h2>
+
+    <div class="restaurant-form__group">
+      <label for="email" class="restaurant-form__label">E-mail</label>
+      <input type="email" class="restaurant-form__input" required />
+    </div>
+
+    <div class="restaurant-form__group">
+      <label for="password" class="restaurant-form__label">Contraseña</label>
+      <input type="password" id="password" class="restaurant-form__input" required />
+      <span class="restaurant-form__password-toggle" onclick="togglePasswordVisibility('password')">
+        <i class="fas fa-eye-slash"></i>
+      </span>
+    </div>
+    
+    <div class="restaurant-form__group">
+      <label for="restaurant-name" class="restaurant-form__label">Nombre del Restaurante</label>
+      <input type="text" class="restaurant-form__input" required />
+    </div>
+
+    <div class="restaurant-form__group">
+      <label for="michelin-stars" class="restaurant-form__label">Estrellas Michelin</label>
+      <input type="number" class="restaurant-form__input" required min="0" max="3" />
+    </div>
+
+    <div class="restaurant-form__group">
+      <label for="restaurant-type" class="restaurant-form__label">Tipo de Restaurante</label>
+      <select class="restaurant-form__input" required>
+        <option disabled selected>Seleccione un tipo</option>
+        <option value="buffet">Restaurante Buffet</option>
+        <option value="fast-food">Restaurante de Comida Rápida</option>
+        <option value="casual-fast-food">Restaurante de Comida Rápida y Casual</option>
+        <option value="author">Restaurante de Autor</option>
+        <option value="gourmet">Restaurante Gourmet</option>
+        <option value="thematic">Restaurante Temático</option>
+        <option value="takeaway">Restaurante para Llevar</option>
+      </select>
+    </div>
+
+    <div class="restaurant-form__group">
+      <label for="menu-image" class="restaurant-form__label">Menu (Imagen)</label>
+      <input type="file" id="menu-image" class="restaurant-form__input" accept="image/*" required />
+    </div>
+
+    <div class="restaurant-form__group">
+      <label for="promotions" class="restaurant-form__label">Promociones</label>
+      <input type="file" id="promotions" class="restaurant-form__input" accept="image/*" required />
+    </div>
+
+    <div class="restaurant-form__group">
+      <label for="address" class="restaurant-form__label">Dirección</label>
+      <input type="text" class="restaurant-form__input" required />
+    </div>
+
+    <div class="restaurant-form__group">
+      <label for="phone" class="restaurant-form__label">Teléfono</label>
+      <input type="tel" class="restaurant-form__input" required />
+    </div>
+
+    <div class="restaurant-form__group">
+      <label for="neighborhood" class="restaurant-form__label">Barrio</label>
+      <select class="restaurant-form__input" required>
+        <option value="barrio1">Barrio 1</option>
+        <option value="barrio2">Barrio 2</option>
+        <option value="barrio3">Barrio 3</option>
+      </select>
+    </div>
+
+    <a href="preview-turista.html" class="restaurant-form__button">Registrar</a>
+
+    </form>
+  </div>
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
+

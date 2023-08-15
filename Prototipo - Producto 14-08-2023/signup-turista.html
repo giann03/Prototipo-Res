@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Registro de Turistas</title>
+  <style>
+    /* Reset de estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 400px;
+}
+
+.form__title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form__field {
+  margin-bottom: 15px;
+}
+
+.form__label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.form__input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.form__password-input {
+  position: relative;
+}
+
+.form__password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.form__submit-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form__submit-btn:hover {
+  background-color: #0058b7;
+}
+
+.form__input,
+.form__submit-btn {
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form__input:focus,
+.form__submit-btn:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 3px rgba(0, 123, 255, 0.4);
+}
+
+  </style>
+  <script src="https://kit.fontawesome.com/333aefa531.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <form class="form form--registration" id="registration-form">
+    <h2 class="form__title">Registro de Turistas</h2>
+    <div class="form__field">
+      <label class="form__label" for="alias">Alias:</label>
+      <input class="form__input" type="text" name="alias" required>
+    </div>
+    <div class="form__field">
+      <label class="form__label" for="email">Email:</label>
+      <input class="form__input" type="email"  name="email" required>
+    </div>
+    <div class="form__field">
+        <label class="form__label" for="password">Password:</label>
+        <div class="form__password-input">
+          <input class="form__input" type="password" id="password" name="password" required>
+          <span class="form__password-toggle" onclick="togglePasswordVisibility('password')">
+            <i class="fas fa-eye-slash"></i>
+          </span>
+        </div>
+      </div>
+      
+    <div class="form__field">
+    <label class="form__label" for="hotel">Hotel:</label>
+    <select class="form__input" name="hotel" required>
+      <option value="" disabled selected>Seleccione un hotel</option>
+      <option value="hotel1">Hotel 1</option>
+      <option value="hotel2">Hotel 2</option>
+      <option value="hotel3">Hotel 3</option>
+    </select>
+  </div>
+  
+  <div class="form__field">
+    <label class="form__label" for="fecha-llegada">Fecha de Llegada:</label>
+    <input class="form__input" type="date" id="fecha-llegada" name="fecha-llegada" required>
+  </div>
+  
+  <div class="form__field">
+    <label class="form__label" for="fecha-salida">Fecha de Salida:</label>
+    <input class="form__input" type="date" id="fecha-salida" name="fecha-salida" required>
+  </div>
+  
+  
+  <!-- Agrega aquí el select de barrios -->
+  <div class="form__field">
+    <label class="form__label" for="barrio">Barrio:</label>
+    <select class="form__input" name="barrio" required>
+      <option value="" disabled selected>Seleccione un barrio</option>
+      <option value="barrio1">Barrio 1</option>
+      <option value="barrio2">Barrio 2</option>
+      <option value="barrio3">Barrio 3</option>
+      <!-- Agrega más opciones según tus necesidades -->
+    </select>
+  </div>
+  
+    <button class="form__submit-btn" type="submit">Registrarse</button>
+  </form>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
